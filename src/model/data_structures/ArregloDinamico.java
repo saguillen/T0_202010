@@ -59,19 +59,43 @@ public class ArregloDinamico<T extends Comparable<T>> implements IArregloDinamic
 
 		public String darElemento(int i) {
 			// TODO implementar
-			return null;
+			
+		String s =elementos[i];
+			
+			return s;
 		}
 
 		public String buscar(String dato) {
 			// TODO implementar
 			// Recomendacion: Usar el criterio de comparacion natural (metodo compareTo()) definido en Strings.
-			return null;
+			String d=null;
+			for (int i = 0; i < tamanoAct; i++)
+			{
+				String s = elementos[i];
+				if( dato == s)
+					d=s;
+			}
+			
+			return d;
 		}
 
 		public String eliminar(String dato) {
 			// TODO implementar
 			// Recomendacion: Usar el criterio de comparacion natural (metodo compareTo()) definido en Strings.
-			return null;
+			String d = null;
+			for(int i = 0; i< tamanoAct; i++)
+			{
+			String eliminar = elementos[i];
+				if(eliminar.compareTo(dato)<0)
+					i++;
+				else if(eliminar.compareTo(dato)==0)
+					{d = eliminar;
+					elementos[i]=elementos[i+1];
+					}
+			}		
+			
+			
+			return d 	;
 		}
 
 }
