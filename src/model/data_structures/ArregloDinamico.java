@@ -95,7 +95,7 @@ public class ArregloDinamico<T extends Comparable<T>> implements IArregloDinamic
 			}		
 			
 			
-			return d 	;
+			return d;
 		}
 
 }
