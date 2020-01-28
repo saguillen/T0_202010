@@ -91,6 +91,8 @@ public class ArregloDinamico<T extends Comparable<T>> implements IArregloDinamic
 				else if(eliminar.compareTo(dato)==0)
 					{d = eliminar;
 					elementos[i]=elementos[i+1];
+					eliminar= null;
+					tamanoAct--;
 					}
 			}		
 			

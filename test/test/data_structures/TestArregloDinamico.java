@@ -26,12 +26,25 @@ public class TestArregloDinamico {
 	@Test
 	public void testArregloDinamico() {
 		// TODO
+	
+		assertTrue(arreglo!=null);
+		assertEquals(0, arreglo.darTamano()); 
 	}
 
 	@Test
 	public void testDarElemento() {
+		//setUp1();
 		setUp2();
 		// TODO
+		String d="d1"; 
+		String d2="d2";
+		arreglo.agregar("d1");
+		arreglo.agregar("d2");
+
+		assertEquals(202, arreglo.darTamano());
+		assertEquals(d,arreglo.darElemento(200));
+		assertEquals(d2,arreglo.darElemento(201));
+ System.out.println(arreglo.darElemento(201));
 	}
 
 }
