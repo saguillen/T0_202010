@@ -18,7 +18,7 @@ public class TestModelo {
 
 	public void setUp2() {
 		for(int i =0; i< CAPACIDAD;i++){
-			modelo.agregar(""+i);
+			modelo.agregar(0+i);
 		}
 	}
 
@@ -33,7 +33,7 @@ public class TestModelo {
 		// TODO  
 	setUp2();
 	assertEquals(100, modelo.darTamano());
-	modelo.agregar("d1");
+	modelo.agregar(1);
 	assertEquals(101, modelo.darTamano());
 
 	}
@@ -41,7 +41,7 @@ public class TestModelo {
 	@Test
 	public void testAgregar() {
 		// TODO Completar la prueba
-		String d = "dato";
+		Integer d = 1;
 		setUp2();
 		modelo.agregar(d);
 		assertEquals("dato", modelo.buscar(d));
@@ -51,13 +51,13 @@ public class TestModelo {
 	public void testBuscar() {
 		setUp2();
 		// TODO Completar la prueba
-		String d1= "d1";
-		String d2 = "d2";
-		String d3 = "d3";
+		Integer d1= 1;
+		Integer d2 = 2;
+		Integer d3 = 3;
 		
-		modelo.agregar("d1");
-		modelo.agregar("d2");
-		modelo.agregar("d3");
+		modelo.agregar(d1);
+		modelo.agregar(d2);
+		modelo.agregar(d3);
 		assertEquals("d1", modelo.buscar(d1));
 		assertEquals("d2", modelo.buscar(d2));
 		assertEquals("d3", modelo.buscar(d3));
@@ -67,8 +67,8 @@ public class TestModelo {
 	public void testEliminar() {
 		setUp2();
 		// TODO Completar la prueba
-		String d1= "d1";
-		modelo.agregar("d1");
+		Integer d1= 1;
+		modelo.agregar(d1);
 		assertEquals(101, modelo.darTamano());
 		modelo.eliminar(d1);
 		assertEquals(100, modelo.darTamano());

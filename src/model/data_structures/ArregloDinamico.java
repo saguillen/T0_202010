@@ -32,7 +32,7 @@ public class ArregloDinamico<T extends Comparable<T>> implements IArregloDinamic
                tamanoAct = 0;
         }
         
-		public void agregar( String dato )
+		public void agregar( T dato )
         {
                if ( tamanoAct == tamanoMax )
                {  // caso de arreglo lleno (aumentar tamaNo)
@@ -45,7 +45,7 @@ public class ArregloDinamico<T extends Comparable<T>> implements IArregloDinamic
                     } 
             	    System.out.println("Arreglo lleno: " + tamanoAct + " - Arreglo duplicado: " + tamanoMax);
                }	
-               elementos[tamanoAct] = dato;
+               elementos[tamanoAct] = (String) dato;
                tamanoAct++;
        }
 
@@ -57,7 +57,7 @@ public class ArregloDinamico<T extends Comparable<T>> implements IArregloDinamic
 			return tamanoAct;
 		}
 
-		public String darElemento(int i) {
+		public Integer darElemento(int i) {
 			// TODO implementar
 			
 		String s =elementos[i];
@@ -65,7 +65,7 @@ public class ArregloDinamico<T extends Comparable<T>> implements IArregloDinamic
 			return s;
 		}
 
-		public String buscar(String dato) {
+		public T buscar(String dato) {
 			// TODO implementar
 			// Recomendacion: Usar el criterio de comparacion natural (metodo compareTo()) definido en Strings.
 			String d=null;

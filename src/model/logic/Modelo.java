@@ -41,11 +41,11 @@ public class Modelo {
 
 	/**
 	 * Requerimiento de agregar dato
-	 * @param dato
+	 * @param d1
 	 */
-	public void agregar(String dato)
+	public void agregar(Integer d1)
 	{	
-		datos.agregar(dato);
+		datos.agregar(d1);
 	}
 	
 	/**
@@ -53,7 +53,7 @@ public class Modelo {
 	 * @param dato Dato a buscar
 	 * @return dato encontrado
 	 */
-	public String buscar(String dato)
+	public int buscar(Integer dato)
 	{
 		return datos.buscar(dato);
 	}
@@ -63,7 +63,7 @@ public class Modelo {
 	 * @param dato Dato a eliminar
 	 * @return dato eliminado
 	 */
-	public String eliminar(String dato)
+	public int eliminar(Integer dato)
 	{
 		return datos.eliminar(dato);
 	}
